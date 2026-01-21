@@ -1,0 +1,93 @@
+/* Simple responsive resume CSS
+   - Open index.html and replace TODO comments with your info.
+   - Print-friendly: has a compact single-column print layout.
+*/
+
+:root{
+  --bg: #ffffff;
+  --muted: #6b7280;
+  --accent: #0f172a;
+  --accent-2: #0ea5a4;
+  --max-width: 900px;
+  --gutter: 24px;
+  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  font-family:var(--font);
+  margin:0;
+  background: #f6f7fb;
+  color:var(--accent);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  padding:40px 16px;
+}
+
+.resume{
+  max-width:var(--max-width);
+  margin:0 auto;
+  background:var(--bg);
+  border-radius:8px;
+  box-shadow:0 6px 24px rgba(15,23,42,0.06);
+  overflow:hidden;
+}
+
+.resume-header{
+  padding:28px var(--gutter);
+  border-bottom:1px solid #eef2f7;
+  background:linear-gradient(90deg, rgba(14,165,164,0.04), transparent);
+}
+
+.name{
+  font-size:28px;
+  font-weight:700;
+  text-align: center;
+}
+.title{font-size:14px;color:var(--muted); margin-top:6px}
+.contact{margin-top:10px;color:var(--muted);font-size:13px;text-align: center;}
+.contact a{color:var(--accent-2);text-decoration:none}
+
+.resume-main{padding:22px var(--gutter)}
+.resume-main section{margin-bottom:18px}
+.resume-main, .resume-footer { background: var(--bg); }
+.resume-main h2{
+  font-size:14px;
+  margin:0 0 8px 0;
+  letter-spacing:0.6px;
+  color:var(--accent-2);
+}
+
+.summary p{margin:0;color:var(--muted)}
+
+.exp{margin-bottom:12px}
+.exp-header{display:flex;justify-content:space-between;align-items:flex-start}
+.exp-org{font-weight:600}
+.exp-location{font-weight: 600;}
+.exp-info{display: flex; justify-content: space-between; align-items: flex-start;}
+.exp-role{font-weight:400;font-size:13px;color:var(--muted)}
+.exp-dates{font-size:13px;color:var(--muted)}
+.exp-body ul{margin:8px 0 0 18px;color:var(--muted)}
+
+.skill-list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+.skill-list li{background:#eef6f6;padding:6px 10px;border-radius:6px;font-size:13px;color:var(--accent)}
+
+
+.resume-footer{padding:12px var(--gutter);border-top:1px solid #eef2f7;font-size:12px;color:var(--muted);display:flex;justify-content:space-between}
+
+/* Small screens: keep single column and a bit tighter */
+@media (max-width:640px){
+  .resume{box-shadow:none;border-radius:0}
+  .resume{margin:0}
+  body{padding:8px}
+}
+
+/* Print rules */
+@media print{
+  body{background:white;padding:0}
+  .resume{box-shadow:none;border-radius:0}
+  .resume{max-width:720px;margin:0}
+  .resume-header{background:transparent}
+  .resume-footer{display:block}
+}
