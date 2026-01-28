@@ -1,0 +1,22 @@
+
+h1 {
+    text-align: center;
+}
+
+body {
+  background-color: lightblue;
+}
+
+#paragraph2 {
+  width: 300px;
+  border: 5px solid green;
+  padding: 30px;
+  margin: 20px;
+  background-color: white;
+  line-height:20px;
+}
+
+.blue {
+    background-color: rgb(56, 56, 243);
+    color: white;
+}
