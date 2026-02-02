@@ -1,0 +1,21 @@
+header {
+    background-color: red;
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    text-align: center;
+    opacity: 1;
+}
+
+header button {
+    background-color: blue;
+    color: white;
+
+}
+
+header nav{
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+}
