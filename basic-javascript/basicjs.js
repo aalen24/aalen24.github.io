@@ -1,46 +1,39 @@
-// Global counter variable
 let counter = 0;
 
-// Function to increment counter
 function tickUp() {
     counter++;
     document.getElementById('counter').textContent = counter;
-}
+}//end tickUp()
 
-// Function to decrement counter
 function tickDown() {
     counter--;
     document.getElementById('counter').textContent = counter;
-}
+}//end ticketDown()
 
-// Function to run for loop and display numbers from 0 to counter
 function runForLoop() {
     let result = '';
     for (let i = 0; i <= counter; i++) {
         result += i + ' ';
     }
     document.getElementById('forLoopResult').textContent = result.trim();
-}
+}//end runForLoop()
 
-// Function to show odd numbers from 1 to counter
 function showOddNumbers() {
     let result = '';
     for (let i = 1; i <= counter; i += 2) {
         result += i + ' ';
     }
     document.getElementById('oddNumberResult').textContent = result.trim();
-}
+}//end showOddNumbers()
 
-// Function to add multiples of 5 up to counter in reverse order and print array
 function addMultiplesToArray() {
     let multiples = [];
     for (let i = counter; i >= 5; i -= 5) {
         multiples.push(i);
     }
     console.log(multiples);
-}
+}//end addMultiplesToArray()
 
-// Function to print car object from form fields
 function printCarObject() {
     let carType = document.getElementById('carType').value;
     let carMPG = document.getElementById('carMPG').value;
@@ -51,9 +44,8 @@ function printCarObject() {
         cColor: carColor
     };
     console.log(carObject);
-}
+}//end printCarObject()
 
-// Function to load car data into form
 function loadCar(carNumber) {
     let carObject;
     if (carNumber === 1) {
@@ -66,9 +58,8 @@ function loadCar(carNumber) {
     document.getElementById('carType').value = carObject.cType;
     document.getElementById('carMPG').value = carObject.cMPG;
     document.getElementById('carColor').value = carObject.cColor;
-}
+}//end loadCar()
 
-// Function to change paragraph color
 function changeColor(colorNumber) {
     let paragraph = document.getElementById('styleParagraph');
     if (colorNumber === 1) {
@@ -78,4 +69,4 @@ function changeColor(colorNumber) {
     } else if (colorNumber === 3) {
         paragraph.style.color = 'blue';
     }
-}
+}//end changeColor()
