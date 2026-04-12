@@ -1,0 +1,130 @@
+/* Same width as #jumpMenu and header `left` so columns line up */
+:root {
+    --jump-menu-width: 15%;
+    /* Space for fixed header (title bar + nav); increase if content overlaps */
+    --main-padding-top: calc(4.5rem + 5vh);
+}
+
+#menuItems {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--jump-menu-width);
+    height: 100vh;
+    background-color: #000000;
+    padding: 0px;
+    text-align: center;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    overflow-y: auto;
+}
+#menuItems button{
+    width: 100%;
+    box-sizing: border-box;
+    background-color: blue;
+    color: white;
+    font-size: medium;
+    padding: 5px;
+}
+
+#jumpMenu{
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: goldenrod;
+    text-align: center;
+    list-style: none;
+    padding: 0.35rem 0;
+    margin: 0;
+    flex: 0 0 auto;
+}
+
+#jumpMenu li {
+    margin: 0.15rem 0;
+}
+#jumpMenu li>a:hover{
+    color: #000000;
+}
+#jumpMenu li:hover{
+    background-color: blue;
+}
+
+#menuItems button:hover{
+    background-color: rgb(168, 128, 26);
+}
+
+#recentArticles:hover + #jumpMenu,
+#jumpMenu:hover {
+    display: block;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: var(--jump-menu-width);
+    width: auto;
+    margin: 0px;
+}
+
+main {
+    box-sizing: border-box;
+    margin-left: var(--jump-menu-width);
+    padding-top: var(--main-padding-top);
+    min-height: 100vh;
+}
+
+header p{
+    text-align: center;
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background-color: #e60303;
+    padding: 20px;
+    margin: 0px;
+    width: 100%;
+}
+
+main h1 {
+    margin: 0 0 1rem;
+    text-align: center;
+}
+
+#container{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#container article {
+    width: 300px;
+    margin-left:30px;
+    color: rgb(164, 164, 164);
+    text-align: justify;
+    transition-duration: 2s;
+}
+#container article h2 + ::first-letter{font-size: 36px;}
+#container article p ~::after{
+    content: url(arrow.png);
+}
+
+#container article:hover{
+    color: black;
+    font-size: larger;
+}
+
+#thanks{
+    display: block;
+    position: fixed;
+    font-size: 24px;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(149, 216, 255);
+    border: 1px solid black;
+    padding: 15px;
+    width: 25%;
+
+}
