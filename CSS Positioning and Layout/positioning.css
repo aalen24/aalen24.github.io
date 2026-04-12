@@ -1,0 +1,104 @@
+/* Same width as #jumpMenu and header `left` so columns line up */
+:root {
+    --jump-menu-width: 15%;
+    /* Space for fixed header (title bar + nav); increase if content overlaps */
+    --main-padding-top: calc(4.5rem + 5vh);
+}
+
+#jumpMenu {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--jump-menu-width);
+    height: 100vh;
+    background-color: #cc9726;
+    padding: 10px;
+    text-align: center;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Fills space below the heading; links are spaced along the main axis */
+#jumpMenu .jump-links {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: var(--jump-menu-width);
+    width: auto;
+    margin: 0px;
+}
+
+/* In-flow content sits to the right of the menu and below the fixed header */
+main {
+    box-sizing: border-box;
+    margin-left: var(--jump-menu-width);
+    padding-top: var(--main-padding-top);
+    min-height: 100vh;
+}
+
+header p{
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    background-color: #e60303;
+    padding: 10px;
+    margin: 0px;
+    width: 100%;
+}
+
+header nav{
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    justify-content: space-around;
+}
+
+header button{
+    background-color: blue;
+    color: white;
+    width: 15vw;
+    height: 5vh;
+    text-align: center;
+    font-size: 16px;
+}
+
+main h1 {
+    margin: 10 0 1rem;
+    text-align: center;
+}
+
+#container{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#container article {
+    width: 300px;
+    margin-left:30px;
+    text-align: justify;
+}
+
+#thanks{
+    display: block;
+    position: fixed;
+    font-size: 24px;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    background-color: rgb(149, 216, 255);
+    border: 1px solid black;
+    padding: 15px;
+    width: 25%;
+
+}
