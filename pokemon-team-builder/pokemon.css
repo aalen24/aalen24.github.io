@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 1rem;
+    background: #f4f7fb;
+    color: #1f2a37;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+section {
+    background: #ffffff;
+    border: 1px solid #d8e0ea;
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+input,
+select,
+button {
+    margin: 0.25rem 0.25rem 0.5rem 0;
+    padding: 0.45rem 0.55rem;
+}
+
+#pokemonImage {
+    width: 180px;
+    height: 180px;
+    object-fit: contain;
+    display: block;
+    background: #f9fbff;
+    border: 1px solid #d8e0ea;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+#teamList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 0.75rem;
+}
+
+.team-card {
+    border: 1px solid #d8e0ea;
+    border-radius: 8px;
+    background: #f9fbff;
+    padding: 0.75rem;
+}
+
+.team-card img {
+    width: 96px;
+    height: 96px;
+    object-fit: contain;
+    display: block;
+}
+
+#statusMessage {
+    min-height: 1.25rem;
+}
